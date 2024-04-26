@@ -1,0 +1,26 @@
+.footer {
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+  }
+  
+.footerContent {
+  max-width: 1440px;
+  margin: 0px auto;
+}
+
+span {
+    padding-right: 30px;
+}
+  
+  .footerContent a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding-right: 30px;
+  }
+  
+  .footerContent a:hover {
+    color: #605f5a;
+  }

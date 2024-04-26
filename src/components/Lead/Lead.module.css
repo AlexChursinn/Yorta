@@ -1,0 +1,15 @@
+.leadContainer {
+  background-image: url("../../img/background.svg");
+  background-size: auto; /* Сохранение размера изображения */
+  background-repeat: no-repeat; /* Запрет повторения изображения */
+}
+
+.leadTitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.leadSubtitle {
+  font-size: 24px;
+}

@@ -1,0 +1,29 @@
+.popup {
+  box-sizing: border-box;
+  padding: 16px 32px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 32px 0px;
+  background: rgba(255, 142, 152, 0.15);
+  border: 2px solid #ff8e98;
+  color: #c40202;
+}
+
+/* АДАПТИВ */
+
+/* Для компов */
+@media only screen and (min-width: 1025px) {
+  .popup {
+    max-width: 355px;
+  }
+}
+
+/* Для планшетов и телефонов */
+@media only screen and (max-width: 1024px) {
+  .popup {
+    padding: 12px 28px;
+    margin: 10px 0px;
+    font-size: 16px;
+  }
+}

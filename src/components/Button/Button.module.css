@@ -4,9 +4,16 @@
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 18px;
   margin-top: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(2px);
+  opacity: 0.8;
+  box-shadow: none;
 }
 
 /* В зависимости от типа кнопки меняем стиль */
@@ -17,12 +24,12 @@
 }
 
 .success {
-  background-color: #85AF6A;
+  background-color: #85af6a;
   color: #fff;
 }
 
 .error {
-  background-color: #FC5656;
+  background-color: #fc5656;
   color: #fff;
 }
 
@@ -36,9 +43,8 @@
 @media only screen and (max-width: 600px) {
   .button {
     width: 100%; /* Кнопка будет на всю ширину экрана */
-    padding: 16px 32px; 
-    font-size: 18px; 
-    padding: 12px 28px;
+    padding: 12px 28px; /* Правильные отступы */
+    font-size: 18px;
     margin-top: 10px;
   }
 }
@@ -47,8 +53,7 @@
 @media only screen and (min-width: 601px) {
   .button {
     width: auto; /* Возвращаем кнопке автоматическую ширину */
-    padding: 16px 32px; 
-    font-size: 18px; 
+    padding: 16px 32px; /* Правильные отступы */
+    font-size: 18px;
   }
 }
-

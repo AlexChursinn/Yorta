@@ -1,26 +1,54 @@
 .button {
-    padding: 16px 32px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
+  padding: 16px 32px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: opacity 0.3s ease;
+  font-size: 18px;
+  margin-top: 16px;
 }
 
+/* В зависимости от типа кнопки меняем стиль */
+
 .primary {
-    background-color: #688ECA;
-    color: #fff;
+  background-color: #688eca;
+  color: #fff;
 }
 
 .success {
-    background-color: #28a745;
-    color: #fff;
+  background-color: #85AF6A;
+  color: #fff;
 }
 
 .error {
-    background-color: #dc3545;
-    color: #fff;
+  background-color: #FC5656;
+  color: #fff;
 }
 
-.loading {
-    pointer-events: none; /* Делаем кнопку некликабельной во время загрузки */
-    opacity: 0.7; /* Уменьшаем прозрачность кнопки */
+.button:hover {
+  opacity: 0.5;
 }
+
+/* АДАПТИВКА */
+
+/* Для мобильных устройств */
+@media only screen and (max-width: 600px) {
+  .button {
+    width: 100%; /* Кнопка будет на всю ширину экрана */
+    padding: 16px 32px; 
+    font-size: 18px; 
+    padding: 12px 28px;
+    margin-top: 10px;
+  }
+}
+
+/* Для планшетов и десктопов */
+@media only screen and (min-width: 601px) {
+  .button {
+    width: auto; /* Возвращаем кнопке автоматическую ширину */
+    padding: 16px 32px; 
+    font-size: 18px; 
+  }
+}
+

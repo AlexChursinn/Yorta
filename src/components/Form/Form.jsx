@@ -4,7 +4,7 @@ import s from './Form.module.css';
 const Form = () => {
     return (
         <div className={s.form}>
-            <div className={s.inputWrapper}>
+            <div className={s.inputContainer}>
                 <label htmlFor="accountNumber">Номер аккаунта</label>
                 <input type="text" id="accountNumber" className={s.input} />
             </div>

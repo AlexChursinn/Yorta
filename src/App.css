@@ -1,9 +1,31 @@
-.wrapper {
-  overflow: hidden;
-  min-height: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0px auto;
+.content {
+  flex: 1;
+  display: flex;
+  background-image: url("../src/img/background.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 0px 15px;
+  margin-bottom: 150px;
+}
+
+.block {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .block:nth-child(2) {
+    display: none;
+  }
 }

@@ -1,15 +1,55 @@
-.leadContainer {
-  background-image: url("../../img/background.svg");
-  background-size: auto; /* Сохранение размера изображения */
-  background-repeat: no-repeat; /* Запрет повторения изображения */
-}
-
-.leadTitle {
+.title {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.leadSubtitle {
+.subtitle {
   font-size: 24px;
+}
+
+/* АДАПТИВКА */
+
+/* Для телефонов вертикальной ориентации*/
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+/* Для телефонов горизонтальной ориентации*/
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+/* Для планшетов в вертикальной ориентации */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+/* Для планшетов в горизонтальной ориентации */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
 }

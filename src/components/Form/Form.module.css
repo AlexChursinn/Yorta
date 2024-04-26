@@ -1,24 +1,22 @@
 .form {
-  width: 355px; /* Ширина формы */
   margin-top: 20px;
 }
 
-.inputWrapper {
+.inputContainer {
   margin-bottom: 10px; /* Отступ между инпутами */
 }
 
 .input {
   width: 100%;
   padding: 16px 32px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 16px 0px 16px 0px;
   box-sizing: border-box;
   border: 2px solid rgba(104, 142, 202, 0.5);
   border-radius: 5px;
   background: rgba(104, 142, 202, 0.05);
   transition: border-color 0.3s, box-shadow 0.3s;
-  font-weight: bold; /* Жирный текст */
-  font-size: 18px; /* Размер текста */
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .input:focus {
@@ -28,7 +26,30 @@
 }
 
 label {
-  color: #688eca; /* Цвет текста */
-  font-size: 18px; /* Размер текста */
-  margin-bottom: 10px; /* Отступ снизу */
+  color: #688eca;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* АДАПТИВ */
+
+/* Для компов */
+@media only screen and (min-width: 1025px) {
+  .form {
+    max-width: 355px;
+  }
+}
+
+/* Для планшетов и телефонов */
+@media only screen and (max-width: 1024px) {
+  .input {
+    padding: 12px 28px; /* Уменьшаем padding для планшетов и телефонов */
+    margin: 10px 0px;
+    font-size: 16px; /* Уменьшаем размер шрифта для планшетов и телефонов */
+  }
+
+  label {
+    font-size: 16px; /* Уменьшаем размер шрифта для меток на планшетах и телефонах */
+    margin-bottom: 8px; /* Меньше отступ у меток на планшетах и телефонах */
+  }
 }

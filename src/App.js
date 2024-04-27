@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import MainImage from "./components/MainImage/MainImage";
 import PaymentMethod from "./components/PaymentMethod/PaymentMethod";
+import OrderInfo from "./components/OrderInfo/OrderInfo";
 
 function App() {
   const paymentMethods = [
@@ -35,7 +36,8 @@ function App() {
         {/* Основной контент */}
         <div className="content">
           <div className="block">
-            <PaymentMethod paymentMethods={paymentMethods} />
+            {/* <PaymentMethod paymentMethods={paymentMethods} /> */}
+            <OrderInfo orderNumber="123456" accountNumber="123456"/>
           </div>
           <div className="block">
             <MainImage />

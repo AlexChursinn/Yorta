@@ -1,15 +1,15 @@
-// OrderInfo.js
-
 import React from "react";
-import styles from "./OrderInfo.module.css"; // Импорт модульных стилей CSS
+import s from "./OrderInfo.module.css";
 
 const OrderInfo = ({ orderNumber, accountNumber }) => {
   return (
-    <div className={styles.orderInfo}>
-      <span>Заказ </span>
-      <span className={styles.orderNumber}>#{orderNumber}</span>
-      <span> Аккаунт </span>
-      <span className={styles.account}>{accountNumber}</span>
+    <div className={s.orderInfo}>
+      <p className={s.order}>
+        Заказ <span className={s.orderNumber}>#{orderNumber}</span>
+      </p>
+      <p className={s.account}>
+        Аккаунт <span className={s.accountNumber}>{accountNumber}</span>
+      </p>
     </div>
   );
 };

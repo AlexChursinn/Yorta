@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className={s.content}>
-        <span>© 2024 Yorta</span>
+        <span className={s.copyright}>© 2024 Yorta</span>
         <a
           href="https://www.yorta.kz/offer.pdf"
           target="_blank"

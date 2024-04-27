@@ -14,15 +14,11 @@
   margin: 0 auto;
 }
 
-span {
-  padding-right: 30px;
-}
-
 .content a {
   color: #000;
   text-decoration: none;
   transition: color 0.3s;
-  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .content a:hover {
@@ -33,17 +29,19 @@ span {
 
 @media only screen and (max-width: 600px) {
   .footer {
-    padding: 15px; 
+    padding: 15px;
     font-size: 14px;
   }
 
-  span, .content a {
-    padding-right: 0; 
-    display: block; 
-    margin-bottom: 10px; 
+  .copyright,
+  .content a {
+    padding-right: 0;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 0px;
   }
 
   .content a:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 }

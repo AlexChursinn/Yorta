@@ -3,25 +3,31 @@ import s from "./PaymentMethod.module.css";
 import mps from "./mps.svg";
 import sbp from "./sbp.svg";
 
-const PaymentMethod = ({ kzt, rub }) => {
+const PaymentMethod = ({ paymentMethods }) => {
   return (
     <div className={s.payment}>
       <h2 className={s.title}>Способ оплаты</h2>
       <div className={s.buttonsContainer}>
-        <button className={s.button}>
-          <img src={mps} alt="Логотим Visa/Mastercard" className={s.logo} />
-          <div className={s.details}>
-            <span className={s.amountTitle}>{kzt} тенге</span>
-            <span className={s.amountSubtitle}>картой банка Казахстан</span>
-          </div>
-        </button>
-        <button className={`${s.button} ${s.buttonRub}`}>
-          <img src={sbp} alt="Логотим СБР" className={s.logo} />
-          <div className={s.details}>
-            <span className={s.amountTitle}>{rub} рублей</span>
-            <span className={s.amountSubtitle}>системой быстрых платежей</span>
-          </div>
-        </button>
+        {paymentMethods.map((method) => (
+          <button
+            key={method.id}
+            className={`${s.button} ${
+              method.currency === "RUB" ? s.buttonRub : ""
+            }`}
+          >
+            <img
+              src={method.currency === "RUB" ? sbp : mps}
+              alt={method.name}
+              className={s.logo}
+            />
+            <div className={s.details}>
+              <span className={s.amountTitle}>
+                {method.amount} {method.currency === "RUB" ? "рублей" : "тенге"}
+              </span>
+              <span className={s.amountSubtitle}>{method.description}</span>
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   );

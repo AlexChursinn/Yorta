@@ -2,13 +2,31 @@ import React from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import Lead from "./components/Lead/Lead";
 import MainImage from "./components/MainImage/MainImage";
-import Button from "./components/Button/Button";
-import Form from "./components/Form/Form";
 import PaymentMethod from "./components/PaymentMethod/PaymentMethod";
 
 function App() {
+  const paymentMethods = [
+    {
+      "id": 2,
+      "name": "Visa/Mc",
+      "description": "Картой банка РК",
+      "currency": "KZT",
+      "amount": 1500,
+      "conversion_rate": 1,
+      "visaLogo": "путь_к_логотипу_visa_mc.svg"
+    },
+    {
+      "id": 1,
+      "name": "СБП",
+      "description": "Сбп для россиян",
+      "currency": "RUB",
+      "amount": 353,
+      "conversion_rate": 4.26,
+      "sbpLogo": "путь_к_логотипу_sbp.svg"
+    }
+  ];
+
   return (
     <div>
       <div className="container">
@@ -17,14 +35,7 @@ function App() {
         {/* Основной контент */}
         <div className="content">
           <div className="block">
-            {/*             <Lead />
-            <Form />
-            <Button
-              title="Подтвердить заказ"
-              type="primary"
-              status="default"
-            /> */}
-            <PaymentMethod kzt="1" rub="1" />
+            <PaymentMethod paymentMethods={paymentMethods} />
           </div>
           <div className="block">
             <MainImage />

@@ -1,0 +1,29 @@
+/* OrderInfo.module.css */
+
+.orderInfo {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orderNumber,
+.account {
+  font-weight: bold;
+  white-space: nowrap; /* Предотвращает перенос элемента на новую строку */
+}
+
+.orderNumber {
+  margin-right: 20px; /* Отступ между номером заказа и аккаунтом */
+}
+
+/* Медиа-запрос для экранов шириной до 424px */
+@media (max-width: 424px) {
+  .orderInfo {
+    flex-direction: column; /* Отображение элементов столбцом */
+  }
+
+  .orderNumber {
+    margin-right: 0; /* Убираем отступ между номером заказа и аккаунтом */
+    margin-bottom: 20px; /* Добавляем отступ между номером заказа и аккаунтом при переходе на новую строку */
+  }
+}

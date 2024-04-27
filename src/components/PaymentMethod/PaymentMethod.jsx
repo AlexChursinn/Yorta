@@ -5,7 +5,8 @@ import sbp from "./sbp.svg";
 import preloader from "./preloader.svg";
 
 const PaymentMethod = ({ paymentMethods }) => {
-  const [loadingButtonId, setLoadingButtonId] = useState(null); 
+  const [loadingButtonId, setLoadingButtonId] = useState(null);
+  const [errorButtonId, setErrorButtonId] = useState(null); // Состояние для отслеживания ошибок кнопок
 
   const handleButtonClick = async (method) => {
     if (loadingButtonId !== null) {
@@ -16,7 +17,13 @@ const PaymentMethod = ({ paymentMethods }) => {
     // Имитация отправки запроса с задержкой для теста
     setTimeout(() => {
       setLoadingButtonId(null);
-    }, 3000); 
+      // Имитация получения ошибки случайным образом (50% вероятность) ДЛЯ ТЕСТА
+      if (Math.random() < 0.9) {
+        setErrorButtonId(method.id); // Устанавливаем состояние ошибки для текущей кнопки
+      } else {
+        setErrorButtonId(null); // Сбрасываем состояние ошибки, если запрос обработан успешно
+      }
+    }, 3000);
   };
 
   const currencySymbols = {
@@ -33,15 +40,27 @@ const PaymentMethod = ({ paymentMethods }) => {
             key={method.id}
             className={`${s.button} ${
               method.currency === "RUB" ? s.buttonRub : ""
-            } ${loadingButtonId === method.id ? s.activeButton : ""} ${
+            } ${
+              loadingButtonId === method.id ? s.activeButton : ""
+            } ${
+              errorButtonId === method.id ? s.errorButton : "" // Добавляем стиль для кнопок с ошибкой после обработки запроса
+            } ${
               loadingButtonId !== null ? s.disabledButton : ""
             }`}
             disabled={loadingButtonId !== null}
-            onClick={() => handleButtonClick(method)}
+            onClick={() => {
+              // Сбрасываем состояние ошибки для предыдущей кнопки при новом клике
+              setErrorButtonId(null);
+              handleButtonClick(method);
+            }}
           >
             {loadingButtonId === method.id && (
               <div className={s.preloaderContainer}>
-                <img src={preloader} alt="preloader" className={s.preloader} />
+                <img
+                  src={preloader}
+                  alt="preloader"
+                  className={s.preloader}
+                />
               </div>
             )}
             <img

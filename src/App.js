@@ -5,13 +5,15 @@ import Header from "./components/Header/Header";
 import MainImage from "./components/MainImage/MainImage";
 import PaymentMethod from "./components/PaymentMethod/PaymentMethod";
 import OrderInfo from "./components/OrderInfo/OrderInfo";
+import Lead from "./components/Lead/Lead";
+import PaymentStatus from "./components/PaymentStatus/PaymentStatus";
 
 function App() {
   const paymentMethods = [
     {
       "id": 2,
       "name": "Visa/Mc",
-      "description": "Картой банка РК",
+      "description": "картой банка Казахстан",
       "currency": "KZT",
       "amount": 1500,
       "conversion_rate": 1,
@@ -20,13 +22,15 @@ function App() {
     {
       "id": 1,
       "name": "СБП",
-      "description": "Сбп для россиян",
+      "description": "системой быстрых платежей",
       "currency": "RUB",
       "amount": 353,
       "conversion_rate": 4.26,
       "sbpLogo": "путь_к_логотипу_sbp.svg"
     }
   ];
+
+  const success = true; 
 
   return (
     <div>
@@ -36,8 +40,11 @@ function App() {
         {/* Основной контент */}
         <div className="content">
           <div className="block">
+           {/*  <Lead /> */}
             {/* <PaymentMethod paymentMethods={paymentMethods} /> */}
             <OrderInfo orderNumber="123456" accountNumber="123456"/>
+            <PaymentStatus amount="1000" success={success}/>
+            
           </div>
           <div className="block">
             <MainImage />

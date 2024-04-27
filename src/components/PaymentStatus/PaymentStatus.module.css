@@ -1,0 +1,66 @@
+.container {
+  margin-top: 20px;
+}
+
+.successTitle {
+  font-size: 46px;
+  font-weight: bold;
+  color: #85af6a;
+}
+
+.errorTitle {
+  font-size: 46px;
+  font-weight: bold;
+  color: #fc5656;
+}
+
+.amount {
+  margin-top: 10px;
+  font-size: 46px;
+}
+
+.subtitle {
+  margin: 5px 0px 16px 0px;
+}
+
+/* АДАПТИВКА */
+
+/* Для мобильных устройств */
+@media only screen and (max-width: 600px) {
+  .successTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #85af6a;
+  }
+
+  .errorTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fc5656;
+  }
+
+  .amount {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+}
+
+/* Для планшетов и десктопов */
+@media only screen and (min-width: 601px) {
+  .successTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #85af6a;
+  }
+
+  .errorTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fc5656;
+  }
+
+  .amount {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+}

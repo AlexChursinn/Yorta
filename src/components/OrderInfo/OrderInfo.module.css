@@ -1,22 +1,22 @@
 .orderInfo {
-  font-size: 24px;
+  font-size: 28px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .orderNumber,
 .accountNumber {
   font-weight: bold;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .orderNumber {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
-
-@media (max-width: 424px) {
-  .orderInfo {
-    font-size: 18px;
+@media (max-width: 425px) {
+  .account {
+    margin-top: 16px;
   }
 }

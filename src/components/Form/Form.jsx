@@ -8,11 +8,11 @@ const Form = () => {
                 <label htmlFor="accountNumber">Номер аккаунта</label>
                 <input type="text" id="accountNumber" className={s.input} />
             </div>
-            <div className={s.inputWrapper}>
+            <div className={s.inputContainer}>
                 <label htmlFor="orderNumber">Номер заказа</label>
                 <input type="text" id="orderNumber" className={s.input} />
             </div>
-            <div className={s.inputWrapper}>
+            <div className={s.inputContainer}>
                 <label htmlFor="paymentAmount">Сумма оплаты в тенге</label>
                 <input type="text" id="paymentAmount" className={s.input} />
             </div>

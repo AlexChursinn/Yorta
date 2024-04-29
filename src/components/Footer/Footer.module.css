@@ -10,13 +10,12 @@
 }
 
 .content {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .content a {
   color: #000;
-  text-decoration: none;
   transition: color 0.3s;
   padding-left: 30px;
 }

@@ -18,12 +18,12 @@ const PaymentMethod = ({ paymentMethods }) => {
     setTimeout(() => {
       setLoadingButtonId(null);
       // Имитация получения ошибки случайным образом (50% вероятность) ДЛЯ ТЕСТА
-      if (Math.random() < 0.9) {
+      if (Math.random() < 0.1) {
         setErrorButtonId(method.id); // Устанавливаем состояние ошибки для текущей кнопки
       } else {
         setErrorButtonId(null); // Сбрасываем состояние ошибки, если запрос обработан успешно
       }
-    }, 3000);
+    }, 2000);
   };
 
   const currencySymbols = {
